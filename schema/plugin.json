@@ -1,0 +1,8 @@
+{
+  "jupyter.lab.shortcuts": [],
+  "title": "@educational-technology-collective/etc_jupyter_server_extension",
+  "description": "@educational-technology-collective/etc_jupyter_server_extension settings.",
+  "type": "object",
+  "properties": {},
+  "additionalProperties": false
+}
