@@ -21,7 +21,7 @@ class ETCJupyterServerExtensionApp(ExtensionApp):
     # ...
 
     test = Bool(False, config=True)
-    
+
     def initialize_settings(self):
         # ...
         # Update the self.settings trait to pass extra
