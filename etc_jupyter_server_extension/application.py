@@ -1,5 +1,6 @@
 from .handlers import RouteHandler
 from jupyter_server.extension.application import ExtensionApp
+from traitlets import Bool
 
 
 class ETCJupyterServerExtensionApp(ExtensionApp):
@@ -19,6 +20,8 @@ class ETCJupyterServerExtensionApp(ExtensionApp):
     # ----------- add custom traits below ---------
     # ...
 
+    test = Bool(False, config=True)
+    
     def initialize_settings(self):
         # ...
         # Update the self.settings trait to pass extra
