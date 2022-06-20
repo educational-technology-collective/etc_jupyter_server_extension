@@ -28,7 +28,7 @@ __pycache__/
 .Python
 build/
 develop-eggs/
-dist/
+# dist/
 downloads/
 eggs/
 .eggs/
@@ -116,3 +116,5 @@ dmypy.json
 
 # OSX files
 .DS_Store
+.github
+.vscode

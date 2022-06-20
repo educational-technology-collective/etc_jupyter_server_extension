@@ -28,15 +28,25 @@ const plugin: JupyterFrontEndPlugin<void> = {
         });
     }
 
-    requestAPI<any>('get_example')
-      .then(data => {
-        console.log(data);
-      })
-      .catch(reason => {
-        console.error(
-          `The etc_jupyter_server_extension server extension appears to be missing.\n${reason}`
-        );
-      });
+    // requestAPI<any>('get_example')
+    //   .then(data => {
+    //     console.log(data);
+    //   })
+    //   .catch(reason => {
+    //     console.error(
+    //       `The etc_jupyter_server_extension server extension appears to be missing.\n${reason}`
+    //     );
+    //   });
+
+    requestAPI<any>('test')
+    .then(data => {
+      console.log(data);
+    })
+    .catch(reason => {
+      console.error(
+        `The etc_jupyter_server_extension server extension appears to be missing.\n${reason}`
+      );
+    });
   }
 };
 
