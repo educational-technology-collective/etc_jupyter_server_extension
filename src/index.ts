@@ -17,30 +17,9 @@ const plugin: JupyterFrontEndPlugin<void> = {
   activate: (app: JupyterFrontEnd, settingRegistry: ISettingRegistry | null) => {
     console.log('JupyterLab extension @educational-technology-collective/etc_jupyter_server_extension is activated!');
 
-    if (settingRegistry) {
-      settingRegistry
-        .load(plugin.id)
-        .then(settings => {
-          console.log('@educational-technology-collective/etc_jupyter_server_extension settings loaded:', settings.composite);
-        })
-        .catch(reason => {
-          console.error('Failed to load settings for @educational-technology-collective/etc_jupyter_server_extension.', reason);
-        });
-    }
-
-    // requestAPI<any>('get_example')
-    //   .then(data => {
-    //     console.log(data);
-    //   })
-    //   .catch(reason => {
-    //     console.error(
-    //       `The etc_jupyter_server_extension server extension appears to be missing.\n${reason}`
-    //     );
-    //   });
-
-    requestAPI<any>('test')
+    requestAPI<any>('version')
     .then(data => {
-      console.log(data);
+      console.log('etc_jupyter_server_extension', data);
     })
     .catch(reason => {
       console.error(
