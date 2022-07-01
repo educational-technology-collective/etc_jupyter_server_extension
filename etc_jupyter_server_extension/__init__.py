@@ -1,6 +1,6 @@
 import json
 from pathlib import Path
-
+from .application import ETCJupyterServerExtensionApp
 from ._version import __version__
 
 HERE = Path(__file__).parent.resolve()
@@ -17,7 +17,6 @@ def _jupyter_labextension_paths():
     }]
 
 
-from .application import ETCJupyterServerExtensionApp
 
 def _jupyter_server_extension_points():
     """

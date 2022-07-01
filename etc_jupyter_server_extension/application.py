@@ -1,6 +1,5 @@
 from .handlers import RouteHandler
 from jupyter_server.extension.application import ExtensionApp
-from jupyter_server.utils import url_path_join
 from traitlets import Bool
 
 
