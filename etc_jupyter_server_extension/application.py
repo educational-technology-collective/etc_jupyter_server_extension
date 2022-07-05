@@ -9,8 +9,8 @@ class ETCJupyterServerExtensionApp(ExtensionApp):
 
     test = Bool(False, config=True)
 
-    # def initialize_settings(self):
-    #     self.log.info(f"Config {self.config}")
+    def initialize_settings(self):
+        self.log.info(f"Config {self.config}")
 
     def initialize_handlers(self):
         handlers = [(r'/etc-jupyter-server-extension/(.*)', RouteHandler)]
