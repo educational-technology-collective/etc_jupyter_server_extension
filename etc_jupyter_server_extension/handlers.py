@@ -11,6 +11,8 @@ class RouteHandler(ExtensionHandlerMixin, JupyterHandler):
     @tornado.web.authenticated
     def get(self, resource):
 
+        self.add_header('Content-Type', 'application/json')
+        
         if resource == 'version':
             self.finish(json.dumps(_fetchVersion()))
         elif resource == 'config':
